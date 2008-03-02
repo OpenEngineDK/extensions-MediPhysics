@@ -1,0 +1,5 @@
+IF (GLUT_FOUND) 
+  INCLUDE_DIRECTORIES(${GLUT_INCLUDE_DIR})
+ELSE (GLUT_FOUND) 
+  MESSAGE ("WARNING: Could not find Glut - depending targets will be disabled.")
+ENDIF (GLUT_FOUND)
