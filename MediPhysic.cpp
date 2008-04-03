@@ -93,16 +93,14 @@ void MediPhysic::Initialize(){
 	mediObject->addForceManipulator(new mediNeedleConstraintManipulator(mediObject, needle,2.4));
 	mediObject2->addConstraintManipulator(new mediNeedleConstraintManipulator(mediObject2, needle,3.1));
 	
-    TextureLoader texLoad;
-
-    ITextureResourcePtr tex = ResourceManager::CreateTexture("EggTexture.tga");
+	ITextureResourcePtr tex = ResourceManager<ITextureResource>::Create("EggTexture.tga");
     tex->Load();
-    texLoad.LoadTextureResource(tex);
+    TextureLoader::LoadTextureResource(tex);
     primaryTextureID = tex->GetID();
 
-    ITextureResourcePtr tex2 = ResourceManager::CreateTexture("EggTexture2.tga");
+    ITextureResourcePtr tex2 = ResourceManager<ITextureResource>::Create("EggTexture2.tga");
     tex2->Load();
-    texLoad.LoadTextureResource(tex2);
+    TextureLoader::LoadTextureResource(tex2);
     secondTextureID = tex2->GetID();
 	
     injected = false;
