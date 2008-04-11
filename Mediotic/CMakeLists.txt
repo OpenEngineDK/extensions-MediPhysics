@@ -29,7 +29,7 @@ ADD_LIBRARY(Mediotic
             mediPressureSurfaceForceManipulator.cpp
 	    timeexp.cpp )
 
-TARGET_LINK_LIBRARIES( Mediotic
+TARGET_LINK_LIBRARIES(  Mediotic
 			Mediviz
 			OBJLoader 
-		      ${GLUT_LIBRARY}   )
+)

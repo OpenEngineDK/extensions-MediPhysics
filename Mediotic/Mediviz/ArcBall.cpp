@@ -17,7 +17,7 @@
 /**                                                         **/
 /*************************************************************/
 
-#include "../OpenGL.h"												// Header File For The OpenGL32 Library
+#include <Meta/OpenGL.h>												// Header File For The OpenGL32 Library
 #include "math.h"                                               // Needed for sqrtf
 
 #include "ArcBall.h"                                            // ArcBall header

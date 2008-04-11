@@ -102,7 +102,7 @@ void frameEnd(void *font, GLclampf r, GLclampf g, GLclampf b,
        glColor3f(r, g, b);
        glRasterPos3f(x, y, 0.0);
        for(ch= str; *ch; ch++) {
-          glutBitmapCharacter(font, (int)*ch);
+	 //GLUT glutBitmapCharacter(font, (int)*ch);
        }
      glPopAttrib();
    glPopMatrix();

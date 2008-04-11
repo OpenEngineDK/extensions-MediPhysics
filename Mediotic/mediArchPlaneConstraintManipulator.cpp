@@ -62,7 +62,7 @@ void mediArchPlaneConstraintManipulator::draw() {
     // Draw constraining sphere for debug purpose
     glPushMatrix();
     glTranslatef(c[0],c[1],c[2]);
-    glutWireSphere(sqrt(sr),10,10);
+    //GLUT glutWireSphere(sqrt(sr),10,10);
     glPopMatrix();
     //cout << c << endl;
 }

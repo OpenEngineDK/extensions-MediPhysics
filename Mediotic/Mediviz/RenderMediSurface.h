@@ -1,7 +1,7 @@
 #pragma once
 
 #include "../mediSurface.h"
-#include "../OpenGL.h"
+#include <Meta/OpenGL.h>
 #include "../OBJLoader/ObjLoader.h"
 //#include <GL/glew.h>
 

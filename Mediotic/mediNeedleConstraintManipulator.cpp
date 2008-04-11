@@ -1,7 +1,7 @@
 #include "mediNeedleConstraintManipulator.h"
 #include "mediIterativeConstraintManipulator.h"
 #include <Meta/OpenGL.h>
-#include "../Meta/GLUT.h"
+//GLUT #include "../Meta/GLUT.h"
 #include <Logging/Logger.h>
 
 mediNeedleConstraintManipulator::mediNeedleConstraintManipulator(mediBody* body, TransformationNode* needle, float radius) : body(body), needle(needle), radius(radius) {

@@ -5,8 +5,6 @@
 //#include <GL/glut.h>												// Header File for Glut
 
 //BoundingSphere
-
-
 void BVHBoundingBox::init(BVHTriangle triangle)
 {
 	for(int i=0;i<3;i++) 
@@ -103,14 +101,6 @@ bool BVHBoundingBox::intersectInDirection(BVHRay r)
 
 void BVHBoundingBox::glDraw(float c) {
 
-	/*glBegin(GL_LINES)
-	for(int i; i<3: i++)
-	{
-		glVertex3f(minB
-
-
-	}
-	glEND();*/
 }
 
 

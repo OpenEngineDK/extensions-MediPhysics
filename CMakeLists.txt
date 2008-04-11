@@ -5,5 +5,5 @@ ADD_LIBRARY(Extensions_MediPhysics
 
 TARGET_LINK_LIBRARIES(Extensions_MediPhysics
   Mediotic
-  ${GLUT_LIBRARIES}
+#  ${GLUT_LIBRARIES}
 )

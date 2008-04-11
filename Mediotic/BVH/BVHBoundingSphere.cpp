@@ -1,10 +1,9 @@
 #include "../Vector3.h"
 #include <algorithm>
 #include "BVHBoundingSphere.h"
-#include "../OpenGL.h"
-#include "../../Meta/GLUT.h"
-//#include <GL/glew.h>												// Header File For The OpenGL32 Library
-//#include <GL/glut.h>												// Header File for Glut
+#include <Meta/OpenGL.h>
+//GLUT #include "../../Meta/GLUT.h"
+
 //BoundingSphere
 
 using namespace std;
@@ -62,6 +61,6 @@ float BVHBoundingSphere::intersect(BVHRay r) {
 void BVHBoundingSphere::glDraw(float c) {
 		glPushMatrix();
 		glTranslatef(getOrigin()[0],getOrigin()[1],getOrigin()[2]);
-		glutWireSphere(getRadius(),4,4);
+		//GLUT glutWireSphere(getRadius(),4,4);
 		glPopMatrix();
 }
