@@ -1,8 +1,7 @@
 #include "../Vector3.h"
 #include <algorithm>
 #include "BVHBoundingBox.h"
-//#include <Meta/GLUT.h>
-//#include <GL/glut.h>												// Header File for Glut
+//GLUT #include <Meta/GLUT.h>
 
 //BoundingSphere
 void BVHBoundingBox::init(BVHTriangle triangle)
