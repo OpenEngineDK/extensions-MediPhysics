@@ -11,6 +11,7 @@
 #define _MEDI_PHYSIC_H_
 
 #include <Core/IModule.h>
+#include <Core/EngineEvents.h>
 #include <Scene/ISceneNode.h>
 #include <Scene/ISceneNodeVisitor.h>
 #include <Scene/GeometryNode.h>
@@ -21,7 +22,7 @@
 #include "Mediotic/Mediviz/RenderMediSurface.h"
 #include "Mediotic/mediArchPlaneConstraintManipulator.h"
 
-using OpenEngine::Core::IModule;
+using namespace OpenEngine::Core;
 
 using namespace OpenEngine::Geometry;
 using namespace OpenEngine::Scene;
@@ -55,10 +56,9 @@ public:
     MediPhysic(string modeldir);
     ~MediPhysic();
 
-    void Initialize();
-    void Process(const float deltaTime, const float percent);
-    void Deinitialize();
-    bool IsTypeOf(const std::type_info& inf);
+    void Handle(InitializeEventArg arg);
+    void Handle(ProcessEventArg arg);
+    void Handle(DeinitializeEventArg arg);
 
     Vector<3,float> GetOrientationVector(int index);
 

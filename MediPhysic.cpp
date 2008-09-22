@@ -62,7 +62,7 @@ Vector<3,float> MediPhysic::GetOrientationVector(int index){
     return Vector<3,float>(particle-center);
 }
 
-void MediPhysic::Initialize(){
+void MediPhysic::Handle(InitializeEventArg arg) {
     if(initialized) return;
 
     mediObjVolumeCreationStrategy* volumeStrategy = NULL;
@@ -108,8 +108,8 @@ void MediPhysic::Initialize(){
     initialized = true;
 }
 
-void MediPhysic::Process(const float deltaTime, const float percent) {
-    if(!initialized) Initialize();
+void MediPhysic::Handle(ProcessEventArg arg) {
+    if(!initialized) Handle(InitializeEventArg());
 
 	mediObject2->applyForceManipulator();
 	mediObject->applyForceManipulator();
@@ -152,12 +152,8 @@ void MediPhysic::Apply(IRenderingView* rv) {
     }
 }
 
-void MediPhysic::Deinitialize(){
+void MediPhysic:: Handle(DeinitializeEventArg arg) {
     initialized = false;
-}
-
-bool MediPhysic::IsTypeOf(const std::type_info& inf){
-    return (inf == typeid(*this));
 }
 
 bool MediPhysic::Inject(TransformationNode* trans){
