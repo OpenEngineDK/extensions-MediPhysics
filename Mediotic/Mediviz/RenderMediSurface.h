@@ -16,7 +16,6 @@ private:
 	GLfloat *vertices;
 	GLfloat *normals;
 
-	void normalize();
 	void generateVBOs();
 	void updateVBOs();
 

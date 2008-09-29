@@ -1,6 +1,4 @@
 #include "mediArchPlaneConstraintManipulator.h"
-#include <Meta/OpenGL.h>
-#include "../Meta/GLUT.h"
 
 mediArchPlaneConstraintManipulator::mediArchPlaneConstraintManipulator(mediBody* body,
                                                                        float sphere_radius)
@@ -60,9 +58,11 @@ void mediArchPlaneConstraintManipulator::apply(void) {
 
 void mediArchPlaneConstraintManipulator::draw() {
     // Draw constraining sphere for debug purpose
+    /*
     glPushMatrix();
     glTranslatef(c[0],c[1],c[2]);
-    //GLUT glutWireSphere(sqrt(sr),10,10);
+    glutWireSphere(sqrt(sr),10,10);
     glPopMatrix();
+    */
     //cout << c << endl;
 }

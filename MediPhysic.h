@@ -18,6 +18,7 @@
 #include <Renderers/IRenderNode.h>
 #include <list>
 #include <string>
+
 #include "Mediotic/mediBody.h"	
 #include "Mediotic/Mediviz/RenderMediSurface.h"
 #include "Mediotic/mediArchPlaneConstraintManipulator.h"

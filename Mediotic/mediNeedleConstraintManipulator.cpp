@@ -1,7 +1,5 @@
 #include "mediNeedleConstraintManipulator.h"
 #include "mediIterativeConstraintManipulator.h"
-#include <Meta/OpenGL.h>
-//GLUT #include "../Meta/GLUT.h"
 #include <Logging/Logger.h>
 
 mediNeedleConstraintManipulator::mediNeedleConstraintManipulator(mediBody* body, TransformationNode* needle, float radius) : body(body), needle(needle), radius(radius) {
@@ -104,12 +102,6 @@ void mediNeedleConstraintManipulator::applyLine(void) {
 				
 		oldPos=newPos;
 		// Invariant: onNeedle.y == newPos.y, og ingen velocity i YZ
-		/*
-		glPushMatrix();
-		glTranslatef(p[0], p[1], p[2]);
-		glutWireSphere(0.1,10,10);
-		glPopMatrix();
-		*/
 	}
 }
 
@@ -118,14 +110,6 @@ void mediNeedleConstraintManipulator::applySphere(void) {
     float size = 1.0f;
 
     Vector3 p = onNeedle.getPos();
-
-    /*
-    // Draw penetrating sphere for debug purpose
-    glPushMatrix();
-    glTranslatef(p[0], p[1], p[2]);
-    glutWireSphere(size,10,10);
-    glPopMatrix();
-    */
 
     mediBody* mediObject = body;
     vector<mediParticle>& particles = mediObject->getParticles();
